@@ -1,0 +1,14 @@
+prefix=/root/android-sdk/ffmpeg/ffmpeg-android-maker-master/build/ffmpeg/x86
+exec_prefix=${prefix}
+libdir=/root/android-sdk/ffmpeg/ffmpeg-android-maker-master/build/ffmpeg/x86/lib
+includedir=/root/android-sdk/ffmpeg/ffmpeg-android-maker-master/build/ffmpeg/x86/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 58.2.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -lm -latomic
+Cflags: -I${includedir}

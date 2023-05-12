@@ -1,0 +1,14 @@
+prefix=/root/android-sdk/ffmpeg/ffmpeg-android-maker-master/build/ffmpeg/x86
+exec_prefix=${prefix}
+libdir=/root/android-sdk/ffmpeg/ffmpeg-android-maker-master/build/ffmpeg/x86/lib
+includedir=/root/android-sdk/ffmpeg/ffmpeg-android-maker-master/build/ffmpeg/x86/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 60.3.100
+Requires: 
+Requires.private: libswresample >= 4.10.100, libavutil >= 58.2.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -pthread -lm -latomic -lz
+Cflags: -I${includedir}

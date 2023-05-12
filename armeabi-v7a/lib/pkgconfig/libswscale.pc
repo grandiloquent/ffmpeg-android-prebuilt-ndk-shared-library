@@ -1,0 +1,14 @@
+prefix=/root/android-sdk/ffmpeg/ffmpeg-android-maker-master/build/ffmpeg/armeabi-v7a
+exec_prefix=${prefix}
+libdir=/root/android-sdk/ffmpeg/ffmpeg-android-maker-master/build/ffmpeg/armeabi-v7a/lib
+includedir=/root/android-sdk/ffmpeg/ffmpeg-android-maker-master/build/ffmpeg/armeabi-v7a/include
+
+Name: libswscale
+Description: FFmpeg image rescaling library
+Version: 7.1.100
+Requires: 
+Requires.private: libavutil >= 58.2.100
+Conflicts:
+Libs: -L${libdir}  -lswscale 
+Libs.private: -lm -latomic
+Cflags: -I${includedir}
